@@ -57,7 +57,7 @@ To install the development version, do the following:
 
 .. code:: sh
 
-    $ git clone https://github.com/Rapptz/discord.py
+    $ git clone https://github.com/opexylol/discord.py
     $ cd discord.py
     $ python3 -m pip install -U .[voice]
 
@@ -77,9 +77,9 @@ Quick Example
 
 .. code:: py
 
-    import discord
+    import discord_py
 
-    class MyClient(discord.Client):
+    class MyClient(discord_py.Client):
         async def on_ready(self):
             print('Logged on as', self.user)
 
@@ -101,10 +101,10 @@ Bot Example
 
 .. code:: py
 
-    import discord
-    from discord.ext import commands
+    import discord_py
+    from discord_py.ext import commands
 
-    intents = discord.Intents.default()
+    intents = discord_py.Intents.default()
     intents.message_content = True
     bot = commands.Bot(command_prefix='>', intents=intents)
 
